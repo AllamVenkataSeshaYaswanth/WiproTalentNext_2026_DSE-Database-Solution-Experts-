@@ -1,0 +1,13 @@
+21
+Drop EMP2 Table.
+====================================================================
+
+SQL Command:
+------------
+
+sql> DROP TABLE EMP2;
+
+Output:
+-------
+
+Table dropped.
