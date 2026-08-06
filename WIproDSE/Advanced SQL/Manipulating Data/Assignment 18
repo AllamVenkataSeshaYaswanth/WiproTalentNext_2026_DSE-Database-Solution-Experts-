@@ -1,0 +1,14 @@
+18
+Rename EMP1 table to EMP_TEST.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     RENAME TO EMP_TEST;
+
+Output:
+-------
+
+Table altered.
