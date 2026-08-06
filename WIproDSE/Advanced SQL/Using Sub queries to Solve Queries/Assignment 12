@@ -1,0 +1,24 @@
+12
+Write a query to display the LOC and average salary of each location.
+(Scalar Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT LOC,
+     (
+         SELECT AVG(SAL)
+         FROM EMP
+         WHERE EMP.DEPTNO = DEPT.DEPTNO
+     ) AS AVG_SAL
+     FROM DEPT;
+
+Output:
+-------
+
+LOC         AVG_SAL
+----------  --------
+NEW YORK    2916.67
+DALLAS      2175.00
+CHICAGO     1566.67
+BOSTON
