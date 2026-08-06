@@ -1,0 +1,25 @@
+ 7
+The HR department needs a report that displays the ENAME, DEPTNO,
+JOB of all employees who work in NEW YORK.
+(Nested Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT ENAME, DEPTNO, JOB
+     FROM EMP
+     WHERE DEPTNO =
+     (
+         SELECT DEPTNO
+         FROM DEPT
+         WHERE LOC='NEW YORK'
+     );
+
+Output:
+-------
+
+ENAME     DEPTNO   JOB
+--------   ------   ----------
+CLARK         10    MANAGER
+KING          10    PRESIDENT
+MILLER        10    CLERK
