@@ -1,0 +1,25 @@
+2
+Display the employees who earn more than the average salary of EMP
+table. (Nested Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT EMPNO, ENAME, SAL
+     FROM EMP
+     WHERE SAL >
+     (
+         SELECT AVG(SAL)
+         FROM EMP
+     );
+
+Output:
+-------
+
+EMPNO   ENAME    SAL
+------  -------  ----
+7566    JONES    2975
+7698    BLAKE    2850
+7788    SCOTT    3000
+7839    KING     5000
+7902    FORD     3000
