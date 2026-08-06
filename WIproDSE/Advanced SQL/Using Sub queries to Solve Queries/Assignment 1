@@ -1,0 +1,19 @@
+Display EMPNO, ENAME, DEPTNO of employees who work with SCOTT (Nested Subquery)
+
+SELECT EMPNO, ENAME, DEPTNO
+FROM EMP
+WHERE DEPTNO = (
+    SELECT DEPTNO
+    FROM EMP
+    WHERE ENAME='SCOTT'
+);
+
+Output:-
+
+| EMPNO | ENAME | DEPTNO |
+| ----- | ----- | ------ |
+| 7369  | SMITH | 20     |
+| 7566  | JONES | 20     |
+| 7788  | SCOTT | 20     |
+| 7876  | ADAMS | 20     |
+| 7902  | FORD  | 20     |
