@@ -1,0 +1,14 @@
+ 4
+Add a new column ADDRESS VARCHAR2(30) in the EMP1 table.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     ADD ADDRESS VARCHAR2(30);
+
+Output:
+-------
+
+Table altered.
