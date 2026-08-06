@@ -1,0 +1,33 @@
+ 3
+Create tables DEPT11 and EMP11 from DEPT1 and EMP1.
+(Create using Sub Query)
+====================================================================
+
+SQL Command:
+------------
+
+sql> CREATE TABLE DEPT11
+     AS
+     SELECT *
+     FROM DEPT1
+     WHERE 1=2;
+
+Output:
+-------
+
+Table created.
+
+
+SQL Command:
+------------
+
+sql> CREATE TABLE EMP11
+     AS
+     SELECT *
+     FROM EMP1
+     WHERE 1=2;
+
+Output:
+-------
+
+Table created.
