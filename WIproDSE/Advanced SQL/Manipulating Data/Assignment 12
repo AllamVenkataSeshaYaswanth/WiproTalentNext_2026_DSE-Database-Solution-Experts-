@@ -1,0 +1,14 @@
+Create a comment on EMPNO column of EMP1 table
+as 'Empno of WIPRO'.
+====================================================================
+
+SQL Command:
+------------
+
+sql> COMMENT ON COLUMN EMP1.EMPNO
+     IS 'Empno of WIPRO';
+
+Output:
+-------
+
+Comment created.
