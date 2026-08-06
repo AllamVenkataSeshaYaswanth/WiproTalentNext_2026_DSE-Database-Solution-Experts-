@@ -1,0 +1,37 @@
+13
+Remove all the comments on the tables and columns.
+====================================================================
+
+SQL Command:
+------------
+
+sql> COMMENT ON TABLE DEPT1 IS '';
+
+Output:
+-------
+
+Comment deleted.
+
+
+sql> COMMENT ON COLUMN DEPT1.DEPTNO IS '';
+
+Output:
+-------
+
+Comment deleted.
+
+
+sql> COMMENT ON TABLE EMP1 IS '';
+
+Output:
+-------
+
+Comment deleted.
+
+
+sql> COMMENT ON COLUMN EMP1.EMPNO IS '';
+
+Output:
+-------
+
+Comment deleted.
