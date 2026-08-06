@@ -1,0 +1,40 @@
+15
+Display the employees from EMP table and sort only employees
+working in DALLAS.
+(Scalar Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT EMPNO, ENAME, JOB, DEPTNO
+     FROM EMP
+     ORDER BY
+     CASE
+         WHEN DEPTNO =
+         (
+             SELECT DEPTNO
+             FROM DEPT
+             WHERE LOC='DALLAS'
+         )
+         THEN ENAME
+     END;
+
+Output:
+-------
+
+EMPNO   ENAME    JOB         DEPTNO
+------  -------  ----------  ------
+7876    ADAMS    CLERK         20
+7902    FORD     ANALYST       20
+7566    JONES    MANAGER       20
+7788    SCOTT    ANALYST       20
+7369    SMITH    CLERK         20
+7499    ALLEN    SALESMAN      30
+7698    BLAKE    MANAGER       30
+7782    CLARK    MANAGER       10
+7900    JAMES    CLERK         30
+7839    KING     PRESIDENT     10
+7654    MARTIN   SALESMAN      30
+7934    MILLER   CLERK         10
+7844    TURNER   SALESMAN      30
+7521    WARD     SALESMAN      30
