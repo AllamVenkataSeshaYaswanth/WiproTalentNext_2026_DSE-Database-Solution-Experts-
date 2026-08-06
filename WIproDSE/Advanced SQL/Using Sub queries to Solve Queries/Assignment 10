@@ -1,0 +1,27 @@
+ 10
+Write a query to display all the employees working with JAMES.
+(Nested Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT EMPNO, ENAME, DEPTNO
+     FROM EMP
+     WHERE DEPTNO =
+     (
+         SELECT DEPTNO
+         FROM EMP
+         WHERE ENAME='JAMES'
+     );
+
+Output:
+-------
+
+EMPNO   ENAME    DEPTNO
+------  -------  ------
+7499    ALLEN      30
+7521    WARD       30
+7654    MARTIN     30
+7698    BLAKE      30
+7844    TURNER     30
+7900    JAMES      30
