@@ -1,0 +1,14 @@
+8
+Drop the NOT NULL constraint for ENAME.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     MODIFY ENAME NULL;
+
+Output:
+-------
+
+Table altered.
