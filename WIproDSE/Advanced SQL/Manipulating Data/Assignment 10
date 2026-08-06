@@ -1,0 +1,15 @@
+10
+Create comment on DEPTNO column of DEPT1
+as 'Deptno of WIPRO'.
+====================================================================
+
+SQL Command:
+------------
+
+sql> COMMENT ON COLUMN DEPT1.DEPTNO
+     IS 'Deptno of WIPRO';
+
+Output:
+-------
+
+Comment created.
