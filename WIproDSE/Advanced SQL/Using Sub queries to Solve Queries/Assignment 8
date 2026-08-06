@@ -1,0 +1,33 @@
+8
+Modify the above query so that the user is prompted for a LOC.
+(Using Prompt)
+====================================================================
+
+SQL Command:
+------------
+sql> ACCEPT P_LOC PROMPT 'Enter Location : '
+
+sql> SELECT ENAME, DEPTNO, JOB
+     FROM EMP
+     WHERE DEPTNO =
+     (
+         SELECT DEPTNO
+         FROM DEPT
+         WHERE LOC='&P_LOC'
+     );
+
+Sample Input:
+-------------
+
+Enter Location : DALLAS
+
+Output:
+-------
+
+ENAME    DEPTNO   JOB
+-------  ------   --------
+SMITH       20    CLERK
+JONES       20    MANAGER
+SCOTT       20    ANALYST
+ADAMS       20    CLERK
+FORD        20    ANALYST
