@@ -1,0 +1,31 @@
+ 6
+Write a query that displays the employee number and name of all
+employees who work in a department with any employee whose name
+contains 'R'. (Nested Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT EMPNO, ENAME
+     FROM EMP
+     WHERE DEPTNO IN
+     (
+         SELECT DEPTNO
+         FROM EMP
+         WHERE ENAME LIKE '%R%'
+     );
+
+Output:
+-------
+
+EMPNO   ENAME
+------  --------
+7499    ALLEN
+7521    WARD
+7654    MARTIN
+7698    BLAKE
+7844    TURNER
+7900    JAMES
+7782    CLARK
+7839    KING
+7934    MILLER
