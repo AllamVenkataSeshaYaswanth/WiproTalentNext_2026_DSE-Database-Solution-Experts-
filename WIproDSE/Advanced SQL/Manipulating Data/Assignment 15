@@ -1,0 +1,14 @@
+ 15
+Drop the UNUSED columns.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     DROP UNUSED COLUMNS;
+
+Output:
+-------
+
+Table altered.
