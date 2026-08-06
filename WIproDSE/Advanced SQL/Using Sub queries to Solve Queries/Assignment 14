@@ -1,0 +1,27 @@
+ 14
+Display the Last N rows from the employees table.
+(Use Correlated Sub Queries)
+====================================================================
+
+SQL Command:
+------------
+-- Example: Display last 3 employees based on EMPNO
+
+sql> SELECT E1.EMPNO, E1.ENAME
+     FROM EMP E1
+     WHERE 3 >
+     (
+         SELECT COUNT(*)
+         FROM EMP E2
+         WHERE E2.EMPNO > E1.EMPNO
+     )
+     ORDER BY EMPNO;
+
+Output:
+-------
+
+EMPNO   ENAME
+------  -------
+7876    ADAMS
+7902    FORD
+7934    MILLER
