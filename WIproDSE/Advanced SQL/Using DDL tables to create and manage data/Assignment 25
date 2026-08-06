@@ -1,0 +1,27 @@
+25
+Flashback the recently dropped table by renaming it to EMP2_1.
+(Flashback Table)
+====================================================================
+
+SQL Command:
+------------
+
+sql> FLASHBACK TABLE EMP2
+     TO BEFORE DROP
+     RENAME TO EMP2_1;
+
+Output:
+-------
+
+Flashback complete.
+
+
+Verify:
+-------
+
+sql> SELECT * FROM EMP2_1;
+
+Output:
+-------
+
+No rows selected.
