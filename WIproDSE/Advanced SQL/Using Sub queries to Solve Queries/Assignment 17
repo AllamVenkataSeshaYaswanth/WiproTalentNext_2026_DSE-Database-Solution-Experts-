@@ -1,0 +1,30 @@
+17
+Write a query that displays the LOC of those departments that have
+a sum of salary less than the average salary of all employees in
+the EMP table.
+(Use WITH Clause)
+====================================================================
+
+SQL Command:
+------------
+sql> WITH DEPT_TOTAL AS
+     (
+         SELECT DEPTNO,
+                SUM(SAL) TOTALSAL
+         FROM EMP
+         GROUP BY DEPTNO
+     )
+     SELECT D.LOC
+     FROM DEPT D,
+          DEPT_TOTAL DT
+     WHERE D.DEPTNO=DT.DEPTNO
+     AND DT.TOTALSAL <
+     (
+         SELECT AVG(SAL)
+         FROM EMP
+     );
+
+Output:
+-------
+
+No rows selected.
