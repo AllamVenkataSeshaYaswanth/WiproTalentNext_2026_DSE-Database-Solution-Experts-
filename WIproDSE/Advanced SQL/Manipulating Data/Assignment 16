@@ -1,0 +1,21 @@
+16
+Drop EMP1 and DEPT1 tables.
+====================================================================
+
+SQL Command:
+------------
+
+sql> DROP TABLE EMP1;
+
+Output:
+-------
+
+Table dropped.
+
+
+sql> DROP TABLE DEPT1;
+
+Output:
+-------
+
+Table dropped.
