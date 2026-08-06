@@ -1,0 +1,29 @@
+11
+Display all the employees who earn less than the average salaries
+of their respective departments.
+(Correlated Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT EMPNO, ENAME, SAL, DEPTNO
+     FROM EMP E
+     WHERE SAL <
+     (
+         SELECT AVG(SAL)
+         FROM EMP
+         WHERE DEPTNO = E.DEPTNO
+     );
+
+Output:
+-------
+
+EMPNO   ENAME     SAL    DEPTNO
+------  --------  -----  ------
+7369    SMITH      800      20
+7876    ADAMS     1100      20
+7934    MILLER    1300      10
+7521    WARD      1250      30
+7654    MARTIN    1250      30
+7844    TURNER    1500      30
+7900    JAMES      950      30
