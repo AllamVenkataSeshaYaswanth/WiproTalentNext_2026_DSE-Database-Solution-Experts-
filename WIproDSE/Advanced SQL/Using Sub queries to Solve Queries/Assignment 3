@@ -1,0 +1,25 @@
+3
+Display the ENAME, JOB who are Managers.
+(Use EXISTS Operator)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT E1.ENAME, E1.JOB
+     FROM EMP E1
+     WHERE EXISTS
+     (
+         SELECT 1
+         FROM EMP E2
+         WHERE E2.EMPNO = E1.EMPNO
+         AND E1.JOB = 'MANAGER'
+     );
+
+Output:
+-------
+
+ENAME    JOB
+-------- --------
+JONES    MANAGER
+BLAKE    MANAGER
+CLARK    MANAGER
