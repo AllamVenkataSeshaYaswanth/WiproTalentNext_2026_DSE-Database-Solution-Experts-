@@ -1,0 +1,49 @@
+22
+Create EMP2 table again from EMP table without copying data.
+(Create using Sub Query)
+====================================================================
+
+SQL Command:
+------------
+
+sql> CREATE TABLE EMP2
+     AS
+     SELECT *
+     FROM EMP
+     WHERE 1=2;
+
+Output:
+-------
+
+Table created.
+
+
+Verify Structure:
+-----------------
+
+sql> DESC EMP2;
+
+Output:
+-------
+
+Name       Null?    Type
+---------- -------- ----------------
+EMPNO      NOT NULL NUMBER(4)
+ENAME               VARCHAR2(10)
+JOB                 VARCHAR2(9)
+MGR                 NUMBER(4)
+HIREDATE            DATE
+SAL                 NUMBER(7,2)
+COMM                NUMBER(7,2)
+DEPTNO              NUMBER(2)
+
+
+Verify Data:
+------------
+
+sql> SELECT * FROM EMP2;
+
+Output:
+-------
+
+No rows selected.
