@@ -1,0 +1,14 @@
+ 5
+Rename SAL column in EMP1 table to SALARY.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     RENAME COLUMN SAL TO SALARY;
+
+Output:
+-------
+
+Table altered.
