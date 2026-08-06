@@ -1,0 +1,33 @@
+2
+Create table EMP1 with the following columns:
+EMPNO INTEGER PRIMARY KEY,
+ENAME VARCHAR2(20) NOT NULL,
+SAL NUMBER(10,2) CHECK(SAL>5000),
+MGR NUMBER FOREIGN KEY,
+DEPTNO INTEGER FOREIGN KEY
+====================================================================
+
+SQL Command:
+------------
+
+sql> CREATE TABLE EMP1
+     (
+         EMPNO  INTEGER PRIMARY KEY,
+         ENAME  VARCHAR2(20) NOT NULL,
+         SAL    NUMBER(10,2) CHECK(SAL>5000),
+         MGR    NUMBER,
+         DEPTNO INTEGER,
+
+         CONSTRAINT EMP1_MGR_FK
+         FOREIGN KEY(MGR)
+         REFERENCES EMP1(EMPNO),
+
+         CONSTRAINT EMP1_DEPT_FK
+         FOREIGN KEY(DEPTNO)
+         REFERENCES DEPT1(DEPTNO)
+     );
+
+Output:
+-------
+
+Table created.
