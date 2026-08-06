@@ -1,0 +1,49 @@
+ 26
+Check your tables.
+(SQL*Plus Commands)
+====================================================================
+
+SQL Command:
+------------
+
+sql> SELECT TABLE_NAME
+     FROM USER_TABLES
+     ORDER BY TABLE_NAME;
+
+Output:
+-------
+
+TABLE_NAME
+----------------
+DEPT
+DEPT11
+EMP
+EMP1
+EMP11
+EMP2
+EMP2_1
+EMP_TEST
+
+8 rows selected.
+
+-- OR --
+
+sql> SELECT * FROM TAB;
+
+Output:
+-------
+
+TNAME      TABTYPE
+---------  --------
+DEPT       TABLE
+DEPT11     TABLE
+EMP        TABLE
+EMP1       TABLE
+EMP11      TABLE
+EMP2       TABLE
+EMP2_1     TABLE
+EMP_TEST   TABLE
+
+8 rows selected.
+
+====================================================================
