@@ -1,0 +1,24 @@
+19
+Truncate EMP_TEST table and confirm your delete.
+====================================================================
+
+SQL Command:
+------------
+
+sql> TRUNCATE TABLE EMP_TEST;
+
+Output:
+-------
+
+Table truncated.
+
+
+Verify:
+-------
+
+sql> SELECT * FROM EMP_TEST;
+
+Output:
+-------
+
+No rows selected.
