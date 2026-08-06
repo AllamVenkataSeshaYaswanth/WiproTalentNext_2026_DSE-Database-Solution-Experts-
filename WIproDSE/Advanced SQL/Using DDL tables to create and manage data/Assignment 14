@@ -1,0 +1,14 @@
+ 14
+Set SALARY and ENAME columns of EMP1 table as UNUSED.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     SET UNUSED (SALARY, ENAME);
+
+Output:
+-------
+
+Table altered.
