@@ -1,0 +1,25 @@
+9
+Create a report for HR that displays the name and salary of every
+employee who reports to KING.
+(Nested Sub Query)
+====================================================================
+
+SQL Command:
+------------
+sql> SELECT ENAME, SAL
+     FROM EMP
+     WHERE MGR =
+     (
+         SELECT EMPNO
+         FROM EMP
+         WHERE ENAME='KING'
+     );
+
+Output:
+-------
+
+ENAME     SAL
+--------   ----
+JONES      2975
+BLAKE      2850
+CLARK      2450
