@@ -1,0 +1,26 @@
+13
+Write a query to display the least N salaries.
+(Use In-Line Views)
+====================================================================
+
+SQL Command:
+------------
+-- Example: Display the least 3 salaries
+
+sql> SELECT *
+     FROM
+     (
+         SELECT EMPNO, ENAME, SAL
+         FROM EMP
+         ORDER BY SAL
+     )
+     WHERE ROWNUM <= 3;
+
+Output:
+-------
+
+EMPNO   ENAME    SAL
+------  -------  ----
+7369    SMITH     800
+7900    JAMES     950
+7876    ADAMS    1100
