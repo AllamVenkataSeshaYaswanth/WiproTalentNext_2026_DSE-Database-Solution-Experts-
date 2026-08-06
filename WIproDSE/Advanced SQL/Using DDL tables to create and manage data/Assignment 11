@@ -1,0 +1,14 @@
+11
+Create a comment on EMP1 table as 'Employees of WIPRO'.
+====================================================================
+
+SQL Command:
+------------
+
+sql> COMMENT ON TABLE EMP1
+     IS 'Employees of WIPRO';
+
+Output:
+-------
+
+Comment created.
