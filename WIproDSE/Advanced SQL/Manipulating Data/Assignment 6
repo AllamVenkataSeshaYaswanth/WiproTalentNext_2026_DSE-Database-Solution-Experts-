@@ -1,0 +1,48 @@
+ 6
+Rename the Foreign Key constraint names and verify the names
+for EMP1.
+====================================================================
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     RENAME CONSTRAINT EMP1_MGR_FK
+     TO FK_EMP1_MANAGER;
+
+Output:
+-------
+
+Table altered.
+
+
+SQL Command:
+------------
+
+sql> ALTER TABLE EMP1
+     RENAME CONSTRAINT EMP1_DEPT_FK
+     TO FK_EMP1_DEPARTMENT;
+
+Output:
+-------
+
+Table altered.
+
+
+Verify Constraints:
+-------------------
+
+sql> SELECT CONSTRAINT_NAME,
+            CONSTRAINT_TYPE
+     FROM USER_CONSTRAINTS
+     WHERE TABLE_NAME='EMP1';
+
+Output:
+-------
+
+CONSTRAINT_NAME      CONSTRAINT_TYPE
+------------------   ---------------
+EMP1_PK              P
+FK_EMP1_MANAGER      R
+FK_EMP1_DEPARTMENT   R
+SYS_Cxxxx            C
