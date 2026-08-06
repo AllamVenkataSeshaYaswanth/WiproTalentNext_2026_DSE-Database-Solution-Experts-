@@ -1,0 +1,14 @@
+ 9
+Create comment on DEPT1 table as 'Depts of WIPRO'.
+====================================================================
+
+SQL Command:
+------------
+
+sql> COMMENT ON TABLE DEPT1
+     IS 'Depts of WIPRO';
+
+Output:
+-------
+
+Comment created.
