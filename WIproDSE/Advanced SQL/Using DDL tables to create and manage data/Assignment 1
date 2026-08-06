@@ -1,0 +1,21 @@
+ 1
+Create table DEPT1 with the following columns:
+DEPTNO INTEGER PRIMARY KEY,
+DNAME VARCHAR2(30) NOT NULL,
+LOC VARCHAR2(30) NOT NULL
+====================================================================
+
+SQL Command:
+------------
+
+sql> CREATE TABLE DEPT1
+     (
+         DEPTNO INTEGER PRIMARY KEY,
+         DNAME  VARCHAR2(30) NOT NULL,
+         LOC    VARCHAR2(30) NOT NULL
+     );
+
+Output:
+-------
+
+Table created.
